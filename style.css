@@ -1,0 +1,583 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3333333a;
+    color: black;
+}
+
+/* Left side element (first anchor element) */
+.navbar>a:first-child {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    /* font-size: 24px; */
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.edu {
+    font-size: 28px;
+    color: rgba(255, 0, 0, 0.644)
+}
+
+.nexis {
+    font-size: 35px;
+    color: rgb(44, 132, 166);
+}
+
+/* Center elements (Home, Courses, Cart, Contact) */
+.navbar>a.home,
+.navbar>a.courses,
+.navbar>a.contact {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+
+.navbar .home:hover {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+.navbar .courses:hover {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.navbar .contact:hover {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Right side elements (Log In, Join Us) */
+.navbar>a.login,
+.navbar>a.signup {
+    margin-left: auto;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: rgb(139, 139, 243);
+    border-radius: 5px;
+
+
+}
+
+.navbar>a.signup {
+    margin-left: 10px;
+    /* Adjust this value to reduce the distance */
+}
+
+.navbar .login:hover {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+.navbar .signup:hover {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar>a:first-child {
+        margin: 0 0 10px 0;
+    }
+
+    .navbar>a {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .home,
+    .navbar .courses,
+    .navbar .cart,
+    .navbar .contact,
+    .navbar .login,
+    .navbar .signup {
+        padding: 10px;
+    }
+
+    .navbar .edu {
+        font-size: 24px;
+    }
+
+    .navbar .nexis {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar>a {
+        font-size: 14px;
+    }
+
+    .navbar .edu {
+        font-size: 20px;
+    }
+
+    .navbar .nexis {
+        font-size: 26px;
+    }
+}
+
+/* Introduction */
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+.content {
+    flex: 1;
+    padding: 90px;
+}
+
+.content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.image {
+    max-width: 45%;
+    padding: 20px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .content {
+        padding: 20px 0;
+    }
+
+    .content h1,
+    .content p {
+        text-align: center;
+    }
+}
+
+.about-2 {
+    top: 3px;
+    margin-bottom: 40px;
+}
+
+.uni {
+    padding: 2% 6%
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.images img {
+    width: 100px;
+    height: 40px;
+    ;
+
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .content {
+        padding: 20px 0;
+    }
+
+    .content h1,
+    .content p {
+        text-align: center;
+    }
+
+    .about-2 {
+        top: 0;
+        padding: 0 10px;
+    }
+
+    .uni {
+        padding: 5%;
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images img {
+        width: 80px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .images img {
+        width: 60px;
+        height: 25px;
+    }
+}
+
+
+/* Mentors */
+
+.mentors {
+    background-color: rgba(187, 181, 181, 0.1) !important;
+    font-family: sans-serif;
+    padding: 3% 13%;
+    margin-top: 10px;
+}
+
+.mentors h1 {
+    text-align: center;
+    color: rgb(139, 139, 243);
+    font-size: 40px;
+}
+
+.para {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.section7 {
+    display: flex;
+}
+
+.content {
+    width: 30%;
+    margin: 2%;
+    padding: 10px;
+    border: 1px solid white;
+    box-shadow: 5px 10px 8px 1px rgb(139, 139, 243);
+}
+
+.content img {
+    text-align: center;
+    border-radius: 5px;
+}
+
+.content p {
+    font-size: 23px;
+    line-height: 150%;
+    color: blueviolet;
+    padding-top: 15px;
+
+}
+
+.content span {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .section7 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .mentors {
+        padding: 3% 5%;
+    }
+
+    .mentors h1 {
+        font-size: 30px;
+    }
+
+    .para {
+        font-size: 18px;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .content p {
+        font-size: 20px;
+    }
+
+    .content span {
+        font-size: 18px;
+    }
+}
+
+/* Testimonals*/
+/* testimonials-container */
+
+.testimonials-container {
+    background-color: white;
+    font-family: sans-serif;
+    padding: 3% 5%;
+    text-align: center;
+}
+
+.testimonials {
+    font-size: 2rem;
+    color: rgb(139, 139, 243);
+    margin-bottom: 15px;
+}
+
+.para {
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.feedback {
+    display: flex;
+}
+
+.content {
+    width: 30%;
+    margin: 2%;
+    padding: 10px;
+    border: 1px solid white;
+    box-shadow: 5px 10px 8px 1px rgb(139, 139, 243);
+}
+
+.content p {
+    font-size: 20px;
+    line-height: 150%;
+    color: rgb(107, 64, 146);
+    padding-top: 15px;
+
+}
+
+.content span {
+    font-size: 17px;
+}
+
+.content h2 {
+    color: crimson;
+}
+
+
+/* media queries for testimonials-container*/
+
+@media (max-width: 768px) {
+    .feedback {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-container {
+        padding: 3% 5%;
+    }
+
+    .para {
+        font-size: 18px;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .content p {
+        font-size: 20px;
+    }
+
+    .content span {
+        font-size: 18px;
+    }
+}
+
+/* Footer 1 */
+.foot1 {
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    background-color: rgba(251, 247, 247, 0.804);
+}
+
+.foot1 a {
+    text-decoration: none;
+    line-height: 2.3;
+    color: black;
+    font-size: 13px;
+}
+
+.courses {
+    padding: 3%;
+}
+
+/* Footer 2 */
+.foot2 {
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    background-color: rgba(251, 247, 247, 0.804);
+}
+
+.foot2 a {
+    text-decoration: none;
+    line-height: 2.3;
+    color: black;
+    font-size: 13px;
+}
+
+.about1 {
+    padding: 5%;
+}
+
+/* Footer 3 */
+.foot3 {
+    display: flex;
+    font-family: sans-serif;
+    background-color: rgba(251, 247, 247, 0.804);
+    padding: 0.2% 2%;
+}
+
+.icons {
+    font-size: 30px;
+    margin-top: 1%;
+    padding-left: 60%;
+}
+
+.foot3 p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+a:hover {
+    color: gray;
+}
+
+/* Existing styles here... */
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+
+    .foot1,
+    .foot2,
+    .foot3 {
+        flex-direction: column;
+        align-items: center;
+        padding: 5%;
+    }
+
+    .icons {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .foot1 a,
+    .foot2 a,
+    .foot3 p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .foot1,
+    .foot2,
+    .foot3 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+    }
+
+    .icons {
+        padding-left: 0;
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    .foot1 a,
+    .foot2 a,
+    .foot3 p {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending IT Courses</title>
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Trending IT Courses</h1>
+        <div class="course-grid" id="course-grid"></div>
+    </div>
+
+    <!-- Sub Courses Popup -->
+    <div id="sub-courses-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <h2>Selected Courses</h2>
+            <ul id="sub-courses-list"></ul>
+            <input type="checkbox" id="popup-english-course" class="course-checkbox" data-price="50"> Include English Course ($50)
+            <p id="popup-total-price">Total Price: $0</p>
+            <button id="buy-button" class="button">Buy</button>
+        </div>
+    </div>
+
+    <!-- Confirmation Popup -->
+    <div id="confirmation-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-confirmation-popup" class="close">&times;</span>
+            <h2>Confirmation</h2>
+            <p id="selected-courses"></p>
+            <p id="final-price"></p>
+        </div>
+    </div>
+
+    <script src="courses.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="sign-up.css">
+</head>
+<body>
+    <div class="background">
+        <div class="form-container">
+            <form>
+                <div class="signup-container">
+                    <h2>Join Us</h2>
+                    <label for="name">Name: </label><br/><br/>
+                    <input class="login-user-info" id="name" type="text" placeholder="Please enter your name" required/><br/><br/>
+                    <label for="email">Email: </label><br/><br/>
+                    <input class="login-user-info" id="email" type="text" placeholder="Please enter your email" required/><br/><br/>
+                    <label for="password">Password: </label><br/><br/>
+                    <input class="login-user-info" id="password" type="password" placeholder="Please enter password" required/><br/><br/>
+                    <a href="file:///C:/Users/harik/OneDrive/Desktop/Hackathon-2k24/EduNexis_project/index.html"><button type="submit" class="signup-button">Join Us</button></a>
+                    <div class="or">
+                        <hr class="hr-line">
+                        <p class="or-text">OR</p>
+                        <hr class="hr-line">
+                    </div>
+                    <p class="g">
+                        <a href="">
+                            <i class="fa-brands fa-google"></i>
+                            <span>Continue with Google</span>
+                        </a>
+                    </p>
+                    <p class="fb">
+                        <a href="">
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <span>Continue with Facebook</span>
+                        </a>
+                    </p>
+                    <p class="apple">
+                        <a href="">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>Continue with Apple</span>
+                        </a>
+                    </p>
+                    <p>
+                        <span>Already on EduNexis?</span>
+                        <span><a href="file:///C:/Users/harik/OneDrive/Desktop/Hackathon-2k24/EduNexis_project/login/login.html" class="login">Log in</a></span>
+                    </p>
+                </div>
+            </form> 
+        </div>
+    </div>
+    
+    <script>
+        // Function to save form data to local storage
+        function saveFormData() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            localStorage.setItem('name', name);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+        }
+
+        // Function to retrieve form data from local storage
+        function retrieveFormData() {
+            const name = localStorage.getItem('name');
+            const email = localStorage.getItem('email');
+            const password = localStorage.getItem('password');
+
+            if (name) document.getElementById('name').value = name;
+            if (email) document.getElementById('email').value = email;
+            if (password) document.getElementById('password').value = password;
+        }
+
+        // Event listener to save data on input change
+        document.getElementById('name').addEventListener('input', saveFormData);
+        document.getElementById('email').addEventListener('input', saveFormData);
+        document.getElementById('password').addEventListener('input', saveFormData);
+
+        // Retrieve data on page load
+        window.onload = retrieveFormData;
+    </script>
+</body>
+</html>
